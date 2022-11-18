@@ -130,7 +130,18 @@ const AddForm = () => {
         </form>
       </div>
 
-      <div className="col-md-7 mt-5">
+      <div className="col-md-7 mt-2">
+      <div>
+        <center>
+          <h4>Enter User</h4>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => searchSort(e.target.value)}
+          />
+          <br />
+        </center>
+      </div> <br/>
         <Container className="border">
           {(records || []).length > 0 ? (
             <Table striped bordered hover variant="light">
@@ -189,24 +200,7 @@ const AddForm = () => {
         <br />
         <br />
       </div>
-      <div>
-        <center>
-          <h4>Enter User</h4>
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => searchSort(e.target.value)}
-          />
-          <br />
-          {/* {data
-            .filter((item) =>
-              item.UserType.toLowerCase().includes(search.toLowerCase())
-            )
-            .map((item) => {
-              return <div className="searchData">{item.UserType}</div>;
-            })} */}
-        </center>
-      </div>
+      
     </div>
   );
 };
